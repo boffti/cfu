@@ -1,0 +1,21 @@
+{
+  "name": "car-for-u",
+  "version": "1.0.0",
+  "scripts": {
+    "client": "cd client && npm start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.4",
+    "razorpay": "^2.0.6",
+    "shortid": "^2.2.15"
+  },
+  "devDependencies": {
+    "concurrently": "^4.0.1"
+  }
+}
