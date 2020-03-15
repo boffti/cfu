@@ -63,11 +63,12 @@ Node server running on [`localhost:5000`](http://localhost:5000/).
 
 ## Features
 
-- Destination Autocomplete using Google Places API
-- Clandar Date Picker
 - Material Design
-- RazorPay payments integration for checkout
 - Backend NodeJS and Express
+- Destination Autocomplete using Google Places API
+- Calendar Date Picker
+- RazorPay payments integration for checkout
+
 
 ## Tests 
 
@@ -92,7 +93,13 @@ $ npm test or yarn test
 
 ## FAQ
 
-- 
+- How did you calculate the distance between the origin and the destination?
+
+    Ans - Using the haversine function which determines the great-circle distance between two points on a sphere given their longitudes and latitudes. Haven't used any API for this yet.
+
+- Do I have to give my real details to check the RazorPay Booking Payment feature?
+
+    Ans - **NO**. Just give any dummy values for the payment fields as it is running in Test Mode. Booking ID will be generated after Fake Payment.
 
 ---
 
