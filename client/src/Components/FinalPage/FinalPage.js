@@ -59,7 +59,7 @@ export default class FinalPage extends Component{
     const payment_amount = ls.get('confirmedDriver').price;
     const self = this;
     const options = {
-        key: "rzp_test_9OWdrETazEKCDl",
+        key: process.env.REACT_APP_RZP_KEY,
         amount: payment_amount*100,
         name: 'Car For U',
         description: 'Book your car by paying below',

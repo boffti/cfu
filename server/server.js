@@ -1,16 +1,16 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const shortid = require('shortid');
 
+require('dotenv').load();
 const Razorpay = require('razorpay');
 
-const key = "XXX";
-const secret = "XXX";
+// const key = process.env.REACT_APP_RZP_KEY;
+// const secret = process.env.REACT_APP_RZP_SECRET;
 
 const instance = new Razorpay({
-  key_id: key,
-  key_secret: secret
+  key_id: process.env.REACT_APP_RZP_KEY,
+  key_secret: process.env.REACT_APP_RZP_SECRET
 });
 
 const app = express();
